@@ -1,0 +1,44 @@
+@import '../../../../color-palete.scss';
+
+.navbar {
+  margin: 20px 50px;
+  .container-logo {
+    width: 230px;
+    img {
+      width: 100%;
+    }
+  }
+  .links {
+    li {
+      margin-right: 30px;
+      list-style: none;
+      a {
+        text-decoration: none;
+        color: $black;
+      }
+    }
+  }
+
+  .navbar-collapse {
+    justify-content: end;
+  }
+  .navbar-toggler {
+    outline: none !important;
+    box-shadow: none;
+    border: none;
+  }
+}
+
+
+@media only screen and (max-width: 600px) {
+  .navbar {
+    margin: 20px 5px;
+    .navbar-nav {
+      text-align: center;
+    }
+  }
+}
+
+@media only screen and (min-width: 992px) {
+
+}

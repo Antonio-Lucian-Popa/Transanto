@@ -1,0 +1,240 @@
+@import '../../../../color-palete.scss';
+
+.blue-text {
+  color: $blueText;
+}
+
+.container-home {
+  margin: 20px 50px;
+
+  .first-description {
+    margin-top: 200px;
+
+    .description {
+      margin: 20px 0;
+    }
+  }
+
+  .container-description {
+    width: 350px;
+    margin-right: 60px;
+
+    .blue-text {
+      color: $blueText;
+      margin-bottom: 10px;
+    }
+  }
+
+  .container-image {
+    width: 800px;
+
+    img {
+      width: 100%;
+    }
+  }
+
+  // Cards
+
+  .container-cards {
+    margin-top: 200px;
+
+    mat-card {
+      width: 310px;
+      background-color: $dark-blue;
+
+      mat-card-content {
+        padding: 50px 0;
+      }
+
+      mat-icon {
+        transform: scale(1.5);
+        color: white;
+        margin-bottom: 25px;
+      }
+
+      .container-description {
+        margin-top: 20px;
+        text-align: center;
+        color: white;
+        margin-right: 0;
+      }
+    }
+  }
+
+  // End Cards
+
+  // services
+  .second-description {
+    margin-top: 200px;
+
+    .container-description {
+      margin-left: 60px;
+      margin-right: 0;
+
+      .description {
+        margin: 20px 0;
+      }
+
+      .container-icon-review {
+        mat-card {
+          mat-icon {
+            transform: scale(1.5);
+            color: $orange;
+          }
+        }
+
+        .description-review {
+          margin-left: 20px;
+        }
+      }
+    }
+
+    .container-image {
+      width: 400px;
+    }
+  }
+
+  // End services
+
+  .container-story {
+    margin-top: 200px;
+    background-color: $dark-blue;
+    .container-left-story {
+      padding-left: 0!important;
+      .container-image-story {
+        background-image: url("../../../assets/img/story-image.jpg");
+        /* The image used */
+        /* Used if the image is unavailable */
+        height: 100%;
+        /* You must set a specified height */
+        background-position: center;
+        /* Center the image */
+        background-repeat: no-repeat;
+        /* Do not repeat the image */
+        background-size: cover;
+      }
+    }
+    .container-right-story {
+      padding-top: 40px;
+      padding-bottom: 40px;
+      .container-description {
+        width: auto!important;
+        .title {
+          color: white;
+        }
+        .description {
+          color: white;
+          margin: 20px 0;
+        }
+      }
+    }
+  }
+
+  // end services
+.container-about-us {
+  margin-top: 200px;
+  .container-title-about-us {
+    text-align: center;
+    margin-bottom: 45px;
+  }
+  .container-info-about-us {
+    .container-description {
+      .description {
+        margin-bottom: 0!important;
+      }
+    }
+    .container-image {
+      width: 400px;
+    }
+  }
+}
+
+}
+
+@media only screen and (max-width: 600px) {
+  .container-home {
+    margin: 20px 5px;
+
+    .first-description {
+      margin-top: 80px;
+    }
+
+    .container-description {
+      width: 90% !important;
+    }
+
+    .container-image {
+      width: 90% !important;
+    }
+
+    .container-cards {
+      justify-content: center !important;
+
+      mat-card {
+        margin-bottom: 40px;
+
+        .container-description {
+          margin: 0px;
+        }
+      }
+    }
+  }
+  .container-story {
+    width: 90%!important;
+  }
+}
+
+@media only screen and (min-width: 601px) and (max-width: 800px) {
+  .container-home {
+    .container-image {
+      width: 300px;
+
+      img {
+        width: 100%;
+      }
+    }
+  }
+
+}
+
+@media only screen and (max-width: 767px) {
+  .container-story {
+    .container-left-story {
+      padding-right: 0!important;
+      .container-image-story {
+        height: 300px!important;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .container-home {
+    .first-description {
+      flex-direction: column;
+    }
+
+    .container-description {
+      margin-right: 0;
+      margin-bottom: 50px;
+    }
+
+    .container-image {
+      width: 500px;
+
+      img {
+        width: 100%;
+      }
+    }
+
+    .second-description {
+      flex-direction: column-reverse;
+
+      .container-description {
+        margin-left: 0;
+        margin-bottom: 50px;
+      }
+    }
+  }
+
+}
