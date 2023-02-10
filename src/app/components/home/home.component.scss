@@ -1,5 +1,8 @@
 @import '../../../../color-palete.scss';
 
+$size-width: 400px;
+$size-height: 250px;
+
 .blue-text {
   color: $blueText;
 }
@@ -99,8 +102,10 @@
   .container-story {
     margin-top: 200px;
     background-color: $dark-blue;
+
     .container-left-story {
-      padding-left: 0!important;
+      padding-left: 0 !important;
+
       .container-image-story {
         background-image: url("../../../assets/img/story-image.jpg");
         /* The image used */
@@ -114,14 +119,18 @@
         background-size: cover;
       }
     }
+
     .container-right-story {
       padding-top: 40px;
       padding-bottom: 40px;
+
       .container-description {
-        width: auto!important;
+        width: auto !important;
+
         .title {
           color: white;
         }
+
         .description {
           color: white;
           margin: 20px 0;
@@ -131,25 +140,277 @@
   }
 
   // end services
-.container-about-us {
-  margin-top: 200px;
-  .container-title-about-us {
-    text-align: center;
-    margin-bottom: 45px;
-  }
-  .container-info-about-us {
-    .container-description {
-      .description {
-        margin-bottom: 0!important;
+  .container-about-us {
+    margin-top: 200px;
+
+    .container-title-about-us {
+      text-align: center;
+      margin-bottom: 45px;
+    }
+
+    .container-info-about-us {
+      .container-description {
+        .description {
+          margin-bottom: 0 !important;
+        }
+      }
+
+      .container-image {
+        width: 400px;
       }
     }
-    .container-image {
-      width: 400px;
+  }
+
+  .container-vehicles {
+    margin-top: 200px;
+
+    .container-title-vehicles {
+      text-align: center;
+      margin-bottom: 45px;
+    }
+
+    .container-image-vehicles {
+      //width: 900px;
+      max-width: 900px;
+      width: auto;
+
+      img {
+        width: 100%;
+      }
+    }
+  }
+
+  .container-services {
+    margin-top: 200px;
+
+    .container-title-services {
+      text-align: center;
+      margin-bottom: 45px;
+    }
+
+    .container-info-services {
+      margin-top: 50px;
+
+      .container-description {
+        .description {
+          margin-bottom: 0 !important;
+        }
+      }
+
+      .container-image {
+        width: 400px;
+      }
+    }
+  }
+
+  .container-map {
+    margin-top: 200px;
+
+    .container-title-map {
+      text-align: center;
+      margin-bottom: 45px;
+    }
+
+    .container-image-map {
+      //width: 900px;
+      max-width: 900px;
+      width: auto;
+
+      img {
+        width: 100%;
+      }
+    }
+  }
+
+  .container-caracterize {
+    margin-top: 200px;
+
+    .container-title-caracterize {
+      text-align: center;
+      margin-bottom: 45px;
+    }
+
+    .container-info-caracterize {
+      margin-top: 50px;
+
+      .container-description {
+        .description {
+          margin-bottom: 0 !important;
+        }
+      }
+
+      .container-list {
+        padding-left: 20px!important;
+        margin-top: 10px;
+      }
+      .container-cards {
+        margin-top: 0px!important;
+        mat-card {
+          width: 120px!important;
+          height: 120px!important;
+          margin-right: 10px;
+          mat-card-content {
+            padding: 0px!important;
+            .description-card {
+              color: white;
+            }
+            mat-icon {
+              margin-bottom: 10px!important;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .container-our-images {
+    margin-top: 200px;
+
+    .container-title-our-images {
+      text-align: center;
+      margin-bottom: 45px;
+    }
+
+    .container-info-our-images {
+      margin-top: 50px;
+
+      .container-description {
+        .description {
+          margin-bottom: 0 !important;
+        }
+      }
+
+      .caro {
+        width: 737px;
+        margin: 50px 15px;
+      }
+    }
+  }
+
+}
+
+.carousel-wrapper {
+  width: $size-width * 1.3;
+  height: $size-height * 1.4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 5px 5px 25px 0px rgba(46, 61, 73, 0.2);
+  border-radius: 20px;
+  margin: 100px auto 20px;
+}
+
+.carousel-container {
+  width: $size-width;
+  height: $size-height;
+  overflow: hidden;
+  margin: 0 auto;
+}
+
+.carousel {
+  display: flex;
+  width: $size-width * 3;
+  animation: sliding 12s infinite;
+  div {
+    width: $size-width;
+    height: $size-height;
+    background-size: cover;
+    background-position: center;
+  }
+  &:hover {
+    animation-play-state: paused;
+  }
+  .image-one {
+    background-image: url("../../../assets/img/1.jpeg");
+  }
+  .image-two {
+    background-image: url("../../../assets/img/2.jpeg");
+  }
+  .image-three {
+    background-image: url("../../../assets/img/3.jpeg");
+  }
+}
+
+@keyframes sliding {
+  30% {
+    transform: translateX(0);
+  }
+  35% {
+    transform: translateX(-$size-width);
+  }
+  65% {
+    transform: translateX(-$size-width);
+  }
+  70% {
+    transform: translateX(-$size-width * 2);
+  }
+  98% {
+    transform: translateX(-$size-width * 2);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  $size-width: 240px;
+  $size-height: 150px;
+  .carousel-wrapper {
+    width: $size-width * 1.3;
+    height: $size-height * 1.4;
+  }
+
+  .carousel-container {
+    width: $size-width;
+    height: $size-height;
+  }
+
+  .carousel {
+    width: $size-width * 3;
+    > div {
+      width: $size-width;
+      height: $size-height;
+    }
+  }
+
+  @keyframes sliding {
+    30% {
+      transform: translateX(0);
+    }
+    35% {
+      transform: translateX(-$size-width);
+    }
+    65% {
+      transform: translateX(-$size-width);
+    }
+    70% {
+      transform: translateX(-$size-width * 2);
+    }
+    98% {
+      transform: translateX(-$size-width * 2);
+    }
+    100% {
+      transform: translateX(0);
     }
   }
 }
 
-}
+
+@media only screen and (max-width: 450px) {
+  .container-caracterize {
+    .container-info-caracterize {
+      .container-cards {
+       display: flex;
+       flex-direction: column;
+        mat-card {
+          margin-right: 0px!important;
+          margin-top: 10px;
+        }
+      }
+    }
+  }
+  }
+
 
 @media only screen and (max-width: 600px) {
   .container-home {
@@ -179,8 +440,9 @@
       }
     }
   }
+
   .container-story {
-    width: 90%!important;
+    width: 90% !important;
   }
 }
 
@@ -200,9 +462,10 @@
 @media only screen and (max-width: 767px) {
   .container-story {
     .container-left-story {
-      padding-right: 0!important;
+      padding-right: 0 !important;
+
       .container-image-story {
-        height: 300px!important;
+        height: 300px !important;
       }
     }
   }
